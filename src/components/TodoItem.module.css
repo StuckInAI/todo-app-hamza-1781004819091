@@ -1,0 +1,96 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 14px var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.15s;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: #fafbff;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.checkbox:hover {
+  border-color: var(--color-primary);
+}
+
+.checked {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.text {
+  flex: 1;
+  font-size: 15px;
+  color: var(--color-text);
+  word-break: break-word;
+  cursor: text;
+  user-select: none;
+}
+
+.completed .text {
+  color: var(--color-text-subtle);
+  text-decoration: line-through;
+}
+
+.editInput {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-size: 15px;
+  background: var(--color-bg-elevated);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.item:hover .actions,
+.item:focus-within .actions {
+  opacity: 1;
+}
+
+.iconButton {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition: background 0.15s, color 0.15s;
+}
+
+.iconButton:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.iconButton.danger:hover {
+  background: #fee2e2;
+  color: var(--color-danger);
+}
